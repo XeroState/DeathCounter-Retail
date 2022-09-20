@@ -1,6 +1,5 @@
 ## Interface: 90207
-## Title: XeroState's Custom Death Counter
-## Notes: Custom Death Counter
+## Title: XeroState's Death Counter
 ## Version: 2
 ## SavedVariables: DeathCount, DeathPlayer
 DeathCounter.lua
