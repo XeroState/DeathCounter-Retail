@@ -18,16 +18,14 @@ function f:COMBAT_LOG_EVENT_UNFILTERED(...)
 end
 
 SlashCmdList["DC"] = function(msg)
-    local m1 = "I've witnessed" + DeathPlayer + "die %s times now"
-    local m2 = DeathPlayer + " Death Count: %s"
     if msg == "s" then
-        SendChatMessage(m1:format(DeathCount), "SAY")
+        SendChatMessage(("I've witnessed %s died %s times now"):format(DeathPlayer, DeathCount), "SAY")
     elseif msg == "p" then
-        SendChatMessage(m1:format(DeathCount), "PARTY")
+        SendChatMessage(("I've witnessed %s died %s times now"):format(DeathPlayer, DeathCount), "PARTY")
     elseif msg == "r" then
-        SendChatMessage(m1:format(DeathCount), "RAID")
+        SendChatMessage(("I've witnessed %s died %s times now"):format(DeathPlayer, DeathCount), "RAID")
     elseif msg == "rw" then
-        SendChatMessage(m1:format(DeathCount), "RAID_WARNING")
+        SendChatMessage(("I've witnessed %s died %s times now"):format(DeathPlayer, DeathCount), "RAID_WARNING")
     elseif msg == "reset" then
         DeathCount = 0
     elseif msg == "count" then
