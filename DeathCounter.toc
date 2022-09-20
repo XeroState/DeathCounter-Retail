@@ -2,5 +2,5 @@
 ## Title: XeroState's Custom Death Counter
 ## Notes: Custom Death Counter
 ## Version: 2
-## SavedVariables: DeathCount
+## SavedVariables: DeathCount, DeathPlayer
 DeathCounter.lua
