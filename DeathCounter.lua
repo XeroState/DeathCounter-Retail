@@ -18,20 +18,20 @@ function f:COMBAT_LOG_EVENT_UNFILTERED(...)
 end
 
 SlashCmdList["DC"] = function(msg)
+    local m1 = "I've witnessed" + DeathPlayer + "die %s times now"
+    local m2 = DeathPlayer + " Death Count: %s"
     if msg == "s" then
-        SendChatMessage(("I've witnessed Freesia die %s times now"):format(DeathCount), "SAY")
+        SendChatMessage(m1:format(DeathCount), "SAY")
     elseif msg == "p" then
-        SendChatMessage(("I've witnessed Freesia die %s times now"):format(DeathCount), "PARTY")
+        SendChatMessage(m1:format(DeathCount), "PARTY")
     elseif msg == "r" then
-        SendChatMessage(("I've witnessed Freesia die %s times now"):format(DeathCount), "RAID")
+        SendChatMessage(m1:format(DeathCount), "RAID")
     elseif msg == "rw" then
-        SendChatMessage(("I've witnessed Freesia die %s times now"):format(DeathCount), "RAID_WARNING")
+        SendChatMessage(m1:format(DeathCount), "RAID_WARNING")
     elseif msg == "reset" then
         DeathCount = 0
     elseif msg == "count" then
-        print(("Freesia Death Count: %s"):format(DeathCount))
-    elseif msg == "track" then
-        DeathPlayer = "%s"
+        print(m2:format(DeathCount))
     elseif msg == "" or msg == "h" or msg == "help" or msg == "?" then
         print("\nXEROSTATE'S CUSTOM DEATH COUNTER")
         print("\n\n/dc track PLAYER -> Configures which player to death track, also resets count to 0")
