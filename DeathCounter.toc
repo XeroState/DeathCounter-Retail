@@ -1,5 +1,6 @@
 ## Interface: 90207
-## Title: XeroState's Death Counter
-## Version: 2
-## SavedVariables: DeathCount, DeathPlayer
+## Title: |cfffe00f1XeroState's Death Counter|r
+## Version: 5
+## SavedVariables: FreesiaDeathCount
+## SavedVariablesPerCharacter: DeathCount, DeathPlayer
 DeathCounter.lua
